@@ -2,7 +2,7 @@ package weather
 import (
 	"fmt"
 	"weather/internal/client"
-	"weather/geocoder"
+	"weather/internal/geocoder"
 )
 
 func GetWeatherByCity(city string)error{
