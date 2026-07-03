@@ -2,14 +2,15 @@ package weather
 import (
 	"fmt"
 	"weather/internal/client"
+	"weather/geocoder"
 )
 
 func GetWeatherByCity(city string)error{
-	if city != "Москва"{
-		return fmt.Errorf("Город %s не поддерживается.", city)
+	lat, lon, err := geocoder.GetCoordinates(city)
+	if err != nil{
+		return fmt.Errorf("Error: %w", err)
 	}
-
-	info, err := client.GetWeather("55.7558", "37.6173")
+	info, err := client.GetWeather(lat, lon)
 	if err != nil{
 		return err
 	}
