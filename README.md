@@ -13,10 +13,12 @@ CLI-утилита и HTTP-сервер на Go для получения тек
 - [Go 1.22.2](https://go.dev/)
 - [godotenv](https://github.com/joho/godotenv)
 - [Echo](https://echo.labstack.com/)
+- [Redis](https://redis.io/)
 
 ## Требования
 - Установить [Go](https://go.dev/dl/) версии 1.22+
 - API-ключи для Яндекс.Погоды (бесплатный для "Умного дома") и Яндекс.Геокодер (бесплатный тариф)
+- Redis
 
 ## Установка
 1. Клонируйте репозиторий:
@@ -77,13 +79,14 @@ go run cmd/api/main.go
 - [x] Безопасное хранение токенов через `.env` файл
 - [X] Добавить поддержку поиска погоды по названию любого города (геокодер)
 - [X] Сделать HTTP-сервер с REST API (Echo)
-- [ ] Реализовать кэширование частых запросов
-- [ ] Контейнеризация приложения с помощью Docker
-- [ ] Покрытие кода юнит-тестами
+- [X] Реализовать кэширование частых запросов
 
 ## Команда проекта
 Проект разработан студентом в рамках обучения Go:
 - [Michelle-Rodna](https://github.com/Michelle-Rodna) — Student learning Go.
 
 ## Источники
-Обучающий курс: [Rest API на GO — Евгений Пантела](https://youtube.com/playlist?list=PL-hElsNx5Przpos7LzZaMKK1t_J7FZZzK&si=juITfzHu-HKjT574)
+Обучающий курс: 
+* [Rest API на GO — Евгений Пантела](https://youtube.com/playlist?list=PL-hElsNx5Przpos7LzZaMKK1t_J7FZZzK&si=juITfzHu-HKjT574)
+* [Redis за 20 минут](https://youtu.be/QpBaA6B1U90?si=CdxqaL02C2MmxlvR)
+* [Docker за 20 минут](https://youtu.be/Z_cUS7kCAsE?si=l8feSRrZC41XoZSn)
