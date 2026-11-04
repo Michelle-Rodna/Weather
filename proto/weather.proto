@@ -1,0 +1,17 @@
+syntax = "proto3";
+option go_package = "weather/weatherpb";
+
+message WeatherRequest{
+    string city = 1;
+}
+
+message WeatherResponse{
+    string city = 1;
+    int32 temp = 2;
+    int32 feels_like = 3;
+    string condition = 4;
+}
+
+service WeatherService{
+    rpc GetWeather (WeatherRequest) returns (WeatherResponse);
+}
